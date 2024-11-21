@@ -1,0 +1,43 @@
+.yt_worksheet_container {
+    padding: 16px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .yt_worksheet_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .yt_worksheet_btn {
+    padding: 8px 16px;
+    background: #065fd4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  
+  .yt_worksheet_loading {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .loader {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #065fd4;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

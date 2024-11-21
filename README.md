@@ -1,45 +1,87 @@
-# YouTube Summary with ChatGPT
 
-YouTube Summary with ChatGPT is a simple Chrome Extension (manifest v3) that allows you to get both YouTube video transcripts and summary of the video with OpenAI's ChatGPT AI technology. Chrome Extension is available on [Chrome Web Store](https://chrome.google.com/webstore/detail/chatgpt-youtube-summary/nmmicjeknamkfloonkhhcjmomieiodli).
+# YouTube Interactive Worksheet Generator
 
-## How to Install
+A Chrome Extension (manifest v3) that generates interactive educational worksheets from YouTube video transcripts using OpenAI's GPT-4 technology. This extension helps educators and learners create engaging learning materials from educational videos.
 
-To install this extension, follow these steps:
+## Features
 
-1. Download the code on GitHub.
-2. Unzip the downloaded file.
-3. Open the code in your favorite IDE like VS Code.
-4. Run `npm install` in terminal
-```
+- Automatic transcript extraction from YouTube videos
+- AI-powered worksheet generation with multiple question types:
+  - Multiple choice questions
+  - Fill-in-the-blanks
+  - Short answer questions
+- PDF export functionality
+- Worksheet sharing capabilities
+- Support for multiple languages (auto-detects available transcripts)
+
+## Installation
+
+1. Clone this repository
+2. Install dependencies:
+```bash
 npm install
 ```
-5. Run `npm run build` or `npm run build-release` to run webpack to generate **dist** folder.
+
+3. Create a `.env` file in the root directory and add your OpenAI API key:
+```bash
+OPENAI_API_KEY=your_api_key_here
 ```
+
+4. Build the extension:
+```bash
 npm run build
-# or
+# or for production
 npm run build-release
 ```
-6. In case of Google Chrome, open the Extensions page (chrome://extensions/).
-7. Turn on Developer mode by clicking the toggle switch in the top right corner of the page.
-8. Click the `Load unpacked` button and select the **dist** directory.
-9. YouTube Summary with ChatGPT extension should be installed and active!
 
-## How to Use
+5. Load the extension in Chrome:
+   - Open Chrome and navigate to `chrome://extensions/`
+   - Enable "Developer mode"
+   - Click "Load unpacked"
+   - Select the `dist` directory from this project
 
-To use YouTube Summary with ChatGPT extension, follow these steps (or [watch this video](https://www.youtube.com/watch?v=pNxsdLif2cs)):
+## Usage
 
-1. Go to any YouTube videos.
-2. Click the small box on the right top that says `Transcript & Summary`.
-3. Click `View AI Summary` button (It automatically copies the prompt for you and opens the ChatGPT page!)
-4. Hit `Cmd + V` if you use Mac
-5. You'll see a magic!
+1. Navigate to any YouTube video
+2. Click the "Interactive Worksheet Generator" button in the sidebar
+3. Select your preferred language if multiple transcripts are available
+4. Click "Generate Worksheet" to create an interactive worksheet
+5. Use the "Export PDF" button to download the worksheet
+6. Share the worksheet using the "Share" button
 
-## Notes
+## Development
 
-- According to OpenAI, ChatGPT is experiencing exceptionally high demand. They work on scaling their systems but I can't guarantee that ChatGPT keeps free and is open forever.
-- This code manually fetches the YouTube video transcripts, and the platform might change the system so I also cannot guarantee that the YouTube video transcript code works forever. I'll try my best to keep updated!
+The extension is built using:
+- Manifest V3
+- OpenAI GPT-4 API
+- Webpack
+- HTML2Canvas & jsPDF for PDF generation
 
-## Feedback & Support
+To contribute:
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request
 
-If you have any questions or feedback about YouTube Summary with ChatGPT Extension, please reach out to me on [Twitter](https://twitter.com/kazuki_sf_). Also, I'm building Glasp, a social web annotation tool to build your own AI models to write, search, and summarize better. If you're interested, please check out [Glasp](https://glasp.co/ai-summary).
-# chromeextension
+## Security & Privacy
+
+- API keys are stored securely using Chrome's storage API
+- All API calls are made directly to OpenAI's servers
+- No user data is stored or transmitted except for video transcripts
+- Worksheet generation is performed client-side
+
+## Limitations
+
+- Requires videos to have closed captions/transcripts available
+- API usage is subject to OpenAI's rate limits and pricing
+- PDF export quality depends on worksheet content and formatting
+
+## Support
+
+For issues, feature requests, or contributions, please:
+1. Check existing GitHub issues
+2. Create a new issue if needed
+3. Include browser version and steps to reproduce any bugs
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

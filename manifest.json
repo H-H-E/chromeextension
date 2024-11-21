@@ -16,7 +16,7 @@
     {
       "matches": ["https://www.youtube.com/*", "https://chat.openai.com/*"],
       "js": ["contentscript/index.bundle.js"],
-      "css": ["contentscript/yt_ai_summary.css"],
+      "css": ["contentscript/yt_worksheet.css"],
       "all_frames": false
     }
   ],
@@ -25,5 +25,9 @@
   },
   "icons": {
     "48": "images/48.png"
-  }
+  },
+  "permissions": [
+    "storage",
+    "https://api.openai.com/*"
+  ]
 }
